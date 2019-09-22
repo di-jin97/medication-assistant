@@ -1,0 +1,232 @@
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+        -->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Medication Assistant</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body><div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="index.html" class="back link">
+                            <i class="icon icon-back"></i>
+                            <span>Back</span>
+                        </a>
+                    </div>
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Medication Assistant</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+<div data-page="home" class="page">
+  <!-- Search Bar -->
+  <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+ 
+  <!-- Search Bar overlay -->
+  <div class="searchbar-overlay"></div>
+ 
+  <div class="page-content">
+    <!-- This block will be displayed if nothing found -->
+    <div class="content-block searchbar-not-found">
+      <div class="content-block-inner">Nothing found</div>
+    </div>
+ 
+    <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+    <div class="list-block list-block-search searchbar-found">
+      <ul>
+        <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title"> Atorvastatin Calcium</a>
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title"> Levothyroxine</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Lisinopril</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Omeprazole</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Metformin </a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Amlodipine</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Simvastatin</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Hydrocodone/Acetaminophen</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Metoprolol ER</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Losartan</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Azithromycin</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Zolpidem</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Hydrochlorothiazide</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Furosemide</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Metoprolol</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Pantoprazole</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Pantoprazole</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Gabapentin</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Amoxicillin</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Prednisone</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Sertraline</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Tamsulosin</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Fluticasone</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Pravastatin</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Tramadol</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Montelukast</a>  
+              
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Escitalopram</a>  
+          </div>
+        </li>
+          <li class="item-content">
+          <div class="item-inner">
+                <a href="#" class="item-title">Prednisone</a>  
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+            <script type="text/javascript" src="js/my-app.js"></script>
+            <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+            <script type="text/javascript" src="js/drugcheck.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/pop.js"></script>
+    </body>
+</html>
