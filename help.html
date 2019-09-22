@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+                    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+        -->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>Medication Assistant</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="index.html" class="back link">
+                            <i class="icon icon-back"></i>
+                            <span>Back</span>
+                        </a>
+                    </div>
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">Help</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" class="link icon-only open-panel">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="help" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <center>
+                                <h1>
+                                    What do you need help with?
+                                </h1>
+                            </center>
+
+
+
+                            <p>The Medication Assistant App is a mobile app that keeps track of medication a person is taking,
+                                or plans on taking.</p>
+                            <p>The purpose of this mobile app is to help reduce overdoses (ODs) and adverse drug reactions (ADRs).</p>
+
+
+                            <h3>
+                                How to use the app?
+                            </h3>
+                            <p>
+                                Users have to register an account to save their information. (connect with Facebook or phone number) The app will function
+                                by asking user a series of health questions. After receiving this information, the app will
+                                check for potential drug interactions and adverse medical problems that may occur based on
+                                the user’s health data while taking their current regimen. The app will also come up with
+                                a schedule with which the medication should be taken giving the user reminders when to take
+                                medication so they don’t have to remember.
+                            </p>
+                            <h4>
+                                If I do not take daily medication, is this app still useful for me?
+                            </h4>
+                            <p>
+                                Yes. The app will assist with the administration of medication on an as-needed basis. These users will be also able to input
+                                OTC or prescription medication and be alerted to any ADR or OD potential. In lieu of just
+                                entering medication into the app, users will also be able to specify an acute issue, such
+                                as a headache or fever, and the app will recommend a medication that is safe to take for
+                                that issue. Additionally, the app will let them know when it’s okay to take another dose.
+                                The re-dose feature and ability to check temporary medication for acute issues will also
+                                be available to the daily user.
+                            </p>
+                            <h5>
+                                Can I trust this app? Where is the information about drug come from?
+                            </h5>
+                            <p>
+                                The drug database comes from the Federal Drug Administration (FDA) and National Institutes of Health (NIH).
+                            </p>
+                            <h6>
+                                Is this app free? Will I be charged if I want to download some information about drug on this app?
+                            </h6>
+                            <p>
+                                Users can download information about drug for free. But this app will charged you at an appropriate cost.
+                            </p>
+                            <p>
+                                If you still have a question, you can send an email to use use the button below.
+                            </p>
+                            <!-- Link to another page -->
+                            <a href="about.html">About the app</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/drugcheck.js"></script>
+
+</body>
+
+</html>
